@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>El Ahogado</title>
+  
+  <!-- HTML -->
+  
+    <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap" rel="stylesheet">
+
+<link href="http://fonts.cdnfonts.com/css/gagalin" rel="stylesheet">
+  
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+
+
+
+<body>
+  
+  
+  
+  <!-- reglas del juego -->
+
+  
+  <div class="info-oculta" id="informacion">
+    
+
+    <div class="icono">
+      <i id="cerrar-info" class="fa fa-times cerrar"></i>
+    </div>
+
+      <p>
+        1- Primero debes elegir la modalidad que deseas jugar, <b style="color: rgb(246, 246, 246); 
+        font-size: 15px;" > (Aleatorio o Personalizado) </b> <br>
+        2- Con el Boton  <b style="color: rgb(246, 246, 246); font-size: 15px;" > Alestorio</b>
+        jugaras con una palabra <b style="color: rgb(246, 246, 246); font-size: 15px;" > aleatoria. </b> <br>
+        3- Con el Boton  <b style="color: rgb(246, 246, 246); font-size: 15px;" > Agregar </b>
+        jugaras con una palabra <b style="color: rgb(246, 246, 246); font-size: 15px;" > personalizada. </b>
+         que podras dar en el campo de <b style="color: rgb(246, 246, 246); font-size: 15px;" > escoger palabra.</b> <br>
+       
+        4- Tienes  <b style="color: rgb(246, 246, 246); font-size: 15px;" > 8 Vidas </b> para lograr adivinar letra  por letra la palabra dada.
+        <br> 
+        5- A continuacion encontraras un campo para ingresar solo 1 letra a la vez. <br>
+
+        6- No se admiten numeros, signos de puntuacion ni caracteres especiales.
+         <br>
+
+         7- Con <b style="color: rgb(9, 63, 9); font-size: 30px;" > &#9745; </b>
+         podras verificar si la letra que has introducido en el campo corresponde 
+         a una letra de la palabra <b style="color: rgb(9, 63, 9); font-size: 20px;"
+          >OCULTA.</b><br>s
+
+      8- Si se te acaban las vidas antes de lograr adivinar la palabra, seras eliminado.
+      <br>
+      9- Con <b style="color: rgb(9, 63, 9); font-size: 35px;" >&#x21bb;</b> 
+      podras <b style="color: rgb(9, 63, 9); font-size: 20px;"
+      >RECARGAR LA PAGINA</b>, reiniciar el juego y elegir tu modalidad de juego.
+
+        
+      </p> 
+
+    </div>
+  
+  
+  
+  
+  
+  <!-- HEADER <h1>El Juego del  Ahorcado</h1> -->
+  
+  <header class="encabezado">
+    
+    <img src="violeta.png" alt="">
+    <button id="reglas" class="reglas" type="submit">Reglas</button>
+    
+    <button class="btn-modos alea" id="d">Aleatorio</button>
+   
+
+    <div class="personal">
+     
+    <button class="btn-modos agregar" id="y">Agregar</button>
+    <input  onkeypress="return soloLetras(event)" id="personalizado" class="modo" placeholder="Escoger Palabra" maxlength="12" type="password" >
+  </div>
+
+  </header>
+
+  
+  
+  
+    <!-- Contenedor principal -->
+  
+  <div class="contenedor" id="contenedor">
+    
+    
+    
+        <!-- Campos y Botones -->
+    
+     <div class="campos">
+
+    <div class="campo-letra" >
+
+      <i class="fa fa-question interrogacion"></i>
+      <input  onkeypress="return soloLetras(event)" class="texto" type="text" maxlength="1" name="" id="letra" placeholder="Escriba aqui"/>
+    
+    </div>
+    
+
+    
+
+  
+
+    <div class="btn-campos" >
+      
+      <button  class="boton-verificar ab" type="button" name="" id="boton" >
+        <i class="fa fa-check-square i-btn"></i>
+      </button>
+
+      <button  class="boton-verificar-2" type="button" name="" id="btn" >
+        <i class="fa fa-refresh i-btn"></i>
+      </button>
+
+    </div>
+
+    </div>
+
+    
+    
+   
+  
+    
+      <!-- Letras verificadas del usuario -->
+  
+  
+    <div class="contenido-frase" id="contenido-frase">
+      
+        <h3 id="frase">
+      
+        </h3>
+      
+        <div class="contenido-vidas" >
+
+              <div class="vidas" id="vida">
+                  
+              </div>
+
+              <div class="hearts">
+                <i id="vida-uno" class="fa fa-heartbeat corazones"></i>
+                <i id="vida-dos" class="fa fa-heartbeat corazones"></i>
+                <i id="vida-tres" class="fa fa-heartbeat corazones"></i>
+                <i id="vida-cuatro" class="fa fa-heartbeat corazones"></i>
+                <i id="vida-cinco" class="fa fa-heartbeat corazones"></i>
+                <i id="vida-seis" class="fa fa-heartbeat corazones"></i>
+                <i id="vida-siete" class="fa fa-heartbeat corazones"></i>
+                <i id="vida-ocho" class="fa fa-heartbeat corazones"></i>
+                
+              </div>
+
+        </div>
+    </div>
+    
+    
+
+
+     <!-- mensaje de ganar o perder -->
+    
+      <div class="result" >
+
+        <h3 id="frase2">
+      
+        </h3>
+       
+
+          <div id="resultados">
+          
+          </div>
+
+          
+          <i id="ganar" class="fa fa-star lo"></i>
+          <i id="perder" class="fa fa-user-times lo"></i>
+          
+      </div>
+    
+    
+    
+    </div> <!-- FINAL DE CONTENEDOR PRINCIPAL -->
+     
+
+
+<canvas class="ahorcado" id="lienzo" width="300px" height="350px">
+
+</canvas>
+
+  
+  <!-- AHIORCADO -->
+  <!--
+  <div class="ahorcado">
+
+   
+    
+    
+    <div id="uno" class="parte">
+      
+    </div>
+    
+     <div id="dos"  class="parte">
+      
+    </div>
+    
+     <div id="tres" class="parte">
+      
+    </div>
+    
+     <div id="cuatro" class="parte">
+      
+    </div>
+    
+     <div id="cinco" class="parte">
+      
+    </div>
+    
+     <div id="seis"  class="parte">
+      
+    </div>
+
+    <div id="siete"  class="parte">
+      
+    </div>
+
+    <div id="ocho"  class="parte">
+      
+    </div>
+
+
+    
+  </div>
+    -->
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="canva.js"></script>
+  <script src="validacion.js"></script>
+</body>
+</html>

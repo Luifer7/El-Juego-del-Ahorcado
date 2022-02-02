@@ -1,0 +1,999 @@
+
+
+
+
+body {
+    font-size: 15pt;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    
+    background: #f5f0f0;
+
+    font-family: oswald;
+    font-weight: 700;
+
+    background-image: url(sqg2.jpg);
+    
+    background-size: cover;
+    position: relative;
+    
+}
+
+
+/* MENSAJE OCULTO COMIENZA */
+
+.info-oculta {
+  
+  
+  width: 100%;
+  height: 100%;
+  
+  transition: .5s ease all;
+  transform: translateX(-900px);
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  
+}
+
+
+
+.info-mostrar {
+  
+  
+  transition: .5s ease all;
+  width: 100%;
+  height: 100vh;
+
+  display: block;
+  
+  background: black;
+
+  position: absolute;
+  z-index: 10;
+  margin-top: 0;
+  opacity: 95%;
+}
+
+
+
+.cerrar {
+  
+
+  color: darkgreen;
+  align-items: center;
+  transition: .9s ease all;
+  transform: scale(2);
+  
+}
+
+
+
+
+p {
+   
+   width: 80%;
+   color: rgb(185, 12, 119);
+   font-family: oswald;
+   font-weight: 700;
+   
+   margin: 20px auto;
+   font-size: 20px;
+   text-align: justify;
+
+}
+
+.icono {
+  margin-left: 50%;
+  margin-top: 5%;
+}
+
+/* MENSAJE OCULTO TERMINA */
+
+
+
+
+
+
+.encabezado {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  width: 100%;
+  height: 60px;
+  background-image: url(sqg2.jpg);
+
+  /*
+  background: rgb(29, 29, 46); */
+  box-shadow: 10px 9px 8px black;
+  /* background: #080808; */
+  
+}
+
+
+img {
+  
+  width: 25%;
+  height: 80%;
+  
+}
+
+
+.reglas {
+  
+  
+  width: 8%;
+  height: 60%;
+  background: rgba(5, 14, 42, 0.911);
+  border-radius: 10px;
+  
+  outline: none;
+  border: none;
+  cursor: pointer;
+  
+  
+  font-weight: 700;
+  color: white;
+
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
+  transition: .9s ease all;
+}
+
+.reglas:active {
+  transition: .7s ease all;
+  transform: scale(1.7);
+ 
+}
+
+.personal {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-cerrar {
+  transition: .5s ease all;
+  opacity: 0;
+  transform: scale(0.0000009);
+  
+}
+
+.hide {
+  transition: .3s ease all;
+  display: none; 
+  
+}
+
+.agregar {
+
+  height: 60%;
+  width: 40%;
+  font-size: 80%;
+}
+
+.alea {
+  height: 60%;
+  width: 13%;
+  font-size: 78%;  
+}
+
+
+.btn-modos {
+
+  background: rgb(185, 12, 119);
+  border-radius: 10px;
+  
+  outline: none;
+  border: none;
+  cursor: pointer;
+  
+  
+  font-weight: 700;
+  color: white;
+
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
+  transition: .9s ease all;
+}
+
+.modo {
+
+width: 50%;
+height: 50%;
+border-radius: 5px;
+outline: none;
+border: 1px solid green;
+text-align: center;
+
+}
+
+.modo::placeholder {
+  font-size: 12px;
+  text-align: center;
+  color: rgb(82, 79, 79);
+}
+
+/*  ENCABEZADO TERMINA */
+
+
+
+
+
+
+.contenedor {
+  
+  width: 60%;
+  height: 260px;
+  
+  margin: 20px auto;
+
+  
+  border-radius: 25px;
+  background: rgba(12, 11, 11, 0.26);
+  /*
+  background: rgb(29, 29, 46); */
+  box-shadow: 13px 13px 10px black;
+  
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  
+}
+
+
+
+
+
+
+
+/* CAMPOS TEXTO Y BOTONES COMIENZA */
+
+/* CAMPO TEXTO COMIENZA */
+
+.interrogacion {  
+  font-size: 18px;
+  margin-right: 4px;
+
+  color: rgba(255, 0, 0, 0.774);
+}
+
+.interrogacion {
+  font-size: 40px;
+}
+
+
+.campo-letra {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+ 
+}
+
+.texto {
+  width: 50%;
+  height: 50%;
+  margin-left: 10px;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  
+  background: white ; 
+  border-radius: 5px;
+  cursor: pointer;
+
+  border: none;
+
+  box-shadow: 12px 7px 5px black;
+
+}
+
+.texto:focus {
+
+ 
+  outline: 3px solid rgba(3, 78, 3, 0.808);
+
+}
+
+
+
+/* CAMPO TEXTO TERMINA */
+
+.letras-input {
+
+  width: 10%;
+  height: 90%;
+  border: 1px solid black;
+}
+
+
+/* CAMPO BOTONES */
+
+
+.campos {
+
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.btn-campos {
+  height: 80%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+}
+
+
+
+.boton-verificar {
+  
+  width: 25%;
+  height: 60%;
+  
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+  cursor: pointer;
+  
+  background: rgba(3, 78, 3, 0.808);
+  
+  
+  font-weight: 700;
+  color: white;
+  
+  
+  
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.8);
+    transition: .9s ease all;
+
+    position: relative;
+
+}
+
+.ab {
+  opacity: 0;
+  z-index: -1;
+}
+
+.i-btn {
+  font-size: 25px;
+}
+
+.boton-verificar-2 {
+  
+  width: 25%;
+  height: 60%;
+  
+  
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+  cursor: pointer;
+  
+  background: rgba(3, 78, 3, 0.808);
+ 
+  
+  font-weight: 700;
+  color: white;
+  
+  
+
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.8);
+    transition: .9s ease all;
+
+}
+
+
+.boton-verificar:active {
+  transition: .7s ease all;
+  transform: scale(1.5);
+
+}
+
+.boton-verificar-2:active {
+  transition: .7s ease all;
+  transform: scale(1.5);
+
+}
+
+
+
+/* CAMPO BOTONES */
+
+/* CAMPOS TEXTO Y BOTONES TERMINA */
+
+
+
+
+/* CAMPOS VIDAS Y CORAZONES COMIENZA */
+
+
+.contenido-frase {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+  text-align: center;
+  color: white;
+  
+}
+
+
+.contenido-vidas {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+
+h3 {
+  
+  margin-left: 30px;
+  letter-spacing: 2px;
+  text-justify: center;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 25%;
+}
+
+.vidas {
+  
+    
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.corazones {
+
+  font-size: 30px;
+  margin-left: 15px;
+  color: rgb(255, 5, 5);
+}
+
+.hearts {
+  display: flex;
+}
+
+
+.one {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: .7s ease all;
+}
+
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: .5s ease all;
+
+}
+
+/*
+.letras-usadas {
+  width: 40%;
+  height: 30%;
+  margin-right: 20px;
+  border: black 1px solid;
+} */
+
+
+ .ganar {
+
+  color: rgb(214, 228, 15);
+
+  text-align: center;
+  font-size: 35px;
+
+  transition: .5s ease all;
+
+ }
+
+ .perder {
+   color: rgba(202, 15, 15, 0.924);
+   text-align: center;
+  font-size: 30px;
+
+  transition: .5s ease all;
+
+ }
+
+ .lo {
+   opacity: 0;
+    
+   
+ }
+
+ .estrella {
+
+  margin-left: 20px;
+  color: rgb(214, 228, 15);
+  font-size: 35px;
+  transition: .5s ease all;
+ }
+
+ .lose {
+
+  margin-left: 10px;
+  color: rgba(192, 7, 7, 0.924);
+  transition: .5s ease all;
+  font-size: 35px;
+
+ }
+ 
+ 
+ .ahorcado {
+   
+   width: 50%;
+   height: 250px;
+   
+   
+   margin: 15px auto;
+  
+   position: relative;
+   background-size: cover;
+   /* background: rgba(12, 11, 11, 0.26); */
+   box-shadow: 13px 13px 10px black;
+   
+   display: grid;
+   grid-template-rows: repeat(8, 1fr);
+   grid-auto-columns: 1fr;
+  
+ }
+
+
+ 
+.parte {
+  
+  background: rgba(12, 11, 11, 0.26);
+  opacity: 0;
+}
+
+.uno {
+  opacity: 70%;
+  background: rgba(34, 34, 199, 0.733);
+}
+
+
+
+
+
+/* MEDIAQUERIS */
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+  .contenedor {
+    width: 70%;
+  }
+
+  .texto::placeholder {
+
+    font-size: 20px;
+  }
+
+  .interrogacion {
+    font-size: 40px;
+  }
+
+  .boton-verificar-2 {
+    margin-left: 15px;
+  }
+
+
+  .perder {
+      font-size: 40px;
+  }
+
+  .lose {
+      font-size: 40px;
+  }
+
+  .ganar {
+    font-size: 40px;
+}
+
+  .estrella {
+    font-size: 50px;
+    
+}
+
+.vidas {
+  font-size: 35px;
+}
+
+.corazones {
+  font-size: 16px;
+  margin-right: 10px;
+  transition: .1s ease all;
+  transform: scale(2.2);
+}
+
+.btn-campos {
+
+  justify-content: center;
+}
+
+
+
+.campos {
+  justify-content: space-between;
+  
+}
+
+.campo-letra {
+  margin-right: 10px;
+}
+
+.texto {
+  font-size: 20px;
+}
+
+.reglas {
+  width: 16%;
+}
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+  p {
+    font-size: 17px;
+  }
+
+  .contenedor {
+    width: 80%;
+  }
+
+  .texto::placeholder {
+
+    font-size: 18px;
+  }
+
+  .interrogacion {
+    font-size: 30px;
+  }
+
+  .perder {
+    font-size: 35px;
+}
+
+.lose {
+    font-size: 40px;
+}
+
+.ganar {
+  font-size: 30px;
+}
+
+.estrella {
+  font-size: 30px;
+  
+}
+
+.vidas {
+font-size: 30px;
+}
+
+.corazones {
+font-size: 10px;
+margin-right: 8px;
+transition: .1s ease all;
+transform: scale(2.5);
+text-align: center;
+}
+
+.reglas {
+  width: 16%;
+}
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  p {
+    font-size: 14px;
+  }
+
+  .reglas {
+    width: 14%;
+  }
+
+  .alea {
+    font-size: 50%;
+    height: 40%;
+    font-weight: 300;
+  }
+
+  .agregar {
+
+    font-size: 50%;
+    height: 40%;
+    font-weight: 300;
+  }
+
+  .modo {
+    height: 40%;
+  }
+
+  .perder {
+    font-size: 35px;
+}
+
+.lose {
+    font-size: 90px;
+}
+
+.ganar {
+  font-size: 30px;
+}
+
+.estrella {
+  font-size: 30px;
+  
+}
+
+.vidas {
+font-size: 25px;
+}
+
+.corazones {
+font-size: 10px;
+margin-right: 8px;
+transition: .1s ease all;
+transform: scale(2.3);
+text-align: center;
+}
+
+
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    p {
+      font-size: 13px;
+    }
+  .contenedor {
+    width: 90%;
+  }
+
+  .texto::placeholder {
+
+    opacity: 0;
+  }
+
+  .interrogacion {
+    font-size: 30px;
+  }
+
+
+    
+  
+
+  .boton-verificar {
+    font-size: 20px;
+    height: 30px;
+    width: 50%;
+  }
+
+  
+  .boton-verificar-2 {
+    font-size: 20px;
+    height: 30px;
+    width: 50%;
+    
+  }
+
+  .i-btn {
+
+    transition: .001s ease all;
+    transform: scale(.7)
+  
+  }
+
+  .perder {
+      font-size: 25px;
+  }
+
+  .lose {
+      font-size: 25px;
+  }
+
+  .ganar {
+    font-size: 25px;
+}
+
+.estrella {
+    font-size: 25px;
+}
+
+.corazones {
+  font-size: 9px;
+  margin-left: 10px;
+}
+
+.btn-campos {
+
+  justify-content: center;
+}
+
+.boton-verificar-2 {
+
+  margin-left: 10px;
+  
+}
+
+.campos {
+  justify-content: space-between;
+  
+}
+
+.campo-letra {
+  margin-right: 10px;
+}
+
+.texto {
+  font-size: 25px;
+}
+
+.vidas {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.contenido-vidas {
+  width: 80%;
+  gap: 10px;
+}
+
+.reglas {
+  width: 17%;
+}
+
+
+}
+
+
+
+
+
+  @media screen and (max-width: 393px) {
+
+    .contenedor {
+      width: 90%;
+    }
+
+    .texto::placeholder {
+
+      opacity: 0;
+    }
+
+    .interrogacion {
+      font-size: 30px;
+    }
+
+    .boton-verificar {
+      font-size: 18px;
+      height: 30px;
+      width: 50%;
+    }
+  
+    
+    .boton-verificar-2 {
+      font-size: 18px;
+      height: 30px;
+      width: 50%;
+      
+    }
+
+    .i-btn {
+
+      transition: .001s ease all;
+      transform: scale(.8)
+    
+    }
+
+    .perder {
+        font-size: 23px;
+    }
+
+    .lose {
+        font-size: 18px;
+    }
+
+    .ganar {
+      font-size: 24px;
+  }
+
+  .estrella {
+      font-size: 18px;
+  }
+
+  .corazones {
+    font-size: 9px;
+    margin-left: 10px;
+  }
+
+  .btn-campos {
+
+    justify-content: center;
+  }
+
+  .boton-verificar-2 {
+
+    margin-left: 10px;
+    
+  }
+
+  .campos {
+    justify-content: space-between;
+    
+  }
+
+  .campo-letra {
+    margin-right: 10px;
+  }
+
+  .texto {
+    font-size: 18px;
+  }
+
+  .vidas {
+    font-size: 17px;
+    margin-right: 5px;
+  }
+
+  .contenido-vidas {
+    gap: 10px;
+  }
+
+  .reglas {
+    width: 15%;
+  }
+
+
+
+  }
+
+
+
+
+
+
