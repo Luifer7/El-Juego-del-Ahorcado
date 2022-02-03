@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Juego dobleu</title>
+  <title>El Ahogado</title>
   
   <!-- HTML -->
   
@@ -47,11 +47,11 @@
       <p>
         1- Primero debes elegir la modalidad que deseas jugar, <b style="color: rgb(246, 246, 246); 
         font-size: 15px;" > (Aleatorio o Personalizado) </b> <br>
-        2- Con el Botón  <b style="color: rgb(246, 246, 246); font-size: 15px;" > Aleatorio</b>
+        2- Con el Boton  <b style="color: rgb(246, 246, 246); font-size: 15px;" > Alestorio</b>
         jugaras con una palabra <b style="color: rgb(246, 246, 246); font-size: 15px;" > aleatoria. </b> <br>
-        3- Con el campo <b style="color: rgb(246, 246, 246); font-size: 15px;" > Escoger Palabra</b>
-        jugaras con una palabra <b style="color: rgb(246, 246, 246); font-size: 15px;" > personalizada </b>
-         que podras ingresar con el botón <b style="color: rgb(246, 246, 246); font-size: 15px;" > Agregar.</b> <br>
+        3- Con el Boton  <b style="color: rgb(246, 246, 246); font-size: 15px;" > Agregar </b>
+        jugaras con una palabra <b style="color: rgb(246, 246, 246); font-size: 15px;" > personalizada. </b>
+         que podras dar en el campo de <b style="color: rgb(246, 246, 246); font-size: 15px;" > escoger palabra.</b> <br>
        
         4- Tienes  <b style="color: rgb(246, 246, 246); font-size: 15px;" > 8 Vidas </b> para lograr adivinar letra  por letra la palabra dada.
         <br> 
@@ -63,7 +63,7 @@
          7- Con <b style="color: rgb(9, 63, 9); font-size: 30px;" > &#9745; </b>
          podras verificar si la letra que has introducido en el campo corresponde 
          a una letra de la palabra <b style="color: rgb(9, 63, 9); font-size: 20px;"
-          >OCULTA.</b><br>
+          >OCULTA.</b><br>s
 
       8- Si se te acaban las vidas antes de lograr adivinar la palabra, seras eliminado.
       <br>
@@ -97,11 +97,13 @@
   </div>
 
   </header>
-  
+
+
   <canvas class="ahorcado" id="lienzo" width="300px" height="350px">
 
-</canvas>
+  </canvas>
 
+  
 
   
   
@@ -122,11 +124,10 @@
       <input  onkeypress="return soloLetras(event)" class="texto" type="text" maxlength="1" name="" id="letra" placeholder="Escriba aqui"/>
     
     </div>
-    
 
     
 
-  
+    
 
     <div class="btn-campos" >
       
@@ -161,7 +162,7 @@
               <div class="vidas" id="vida">
                   
               </div>
-
+              
               <div class="hearts">
                 <i id="vida-uno" class="fa fa-heartbeat corazones"></i>
                 <i id="vida-dos" class="fa fa-heartbeat corazones"></i>
@@ -205,51 +206,12 @@
      
 
 
+  <!-- 
+<canvas class="ahorcado" id="lienzo" width="300px" height="350px">
+
+</canvas>   -->
 
   
-  <!-- AHIORCADO -->
-  <!--
-  <div class="ahorcado">
-
-   
-    
-    
-    <div id="uno" class="parte">
-      
-    </div>
-    
-     <div id="dos"  class="parte">
-      
-    </div>
-    
-     <div id="tres" class="parte">
-      
-    </div>
-    
-     <div id="cuatro" class="parte">
-      
-    </div>
-    
-     <div id="cinco" class="parte">
-      
-    </div>
-    
-     <div id="seis"  class="parte">
-      
-    </div>
-
-    <div id="siete"  class="parte">
-      
-    </div>
-
-    <div id="ocho"  class="parte">
-      
-    </div>
-
-
-    
-  </div>
-    -->
   
   
   
@@ -262,5 +224,6 @@
   <script src="main.js"></script>
   <script src="canva.js"></script>
   <script src="validacion.js"></script>
+  <script src="/imprimir.js"></script>
 </body>
 </html>
