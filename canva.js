@@ -12,14 +12,14 @@
     
     function vidaSiete() {
         
-        contexto.fillStyle = '#34130B', 'border: 1 solid blak;';
+        contexto.fillStyle = '#b90c77', 'border: 1 solid blak;';
         contexto.fillRect(20,20, 14, 330)
         contexto.lineCap = 'round';
         contexto.fillRect(20,20, 45, 20)
         contexto.linecap = "round";
        
             contexto.beginPath();
-            contexto.strokeStyle = '#34130B';
+            contexto.strokeStyle = '#b90c77';
             contexto.lineWidth = 10;
             contexto.moveTo(25,100);
             contexto.lineTo(60,35);
@@ -29,7 +29,7 @@
             
 
         contexto.beginPath();
-        contexto.strokeStyle = '#34130B';
+        contexto.strokeStyle = '#b90c77';
         contexto.lineWidth = 8;
         contexto.moveTo(0,350)
         contexto.lineTo(27, 320)
