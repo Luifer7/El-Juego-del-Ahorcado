@@ -1,5 +1,6 @@
 
 
+
 // funcion para cargar
 
 document.getElementById("btn").addEventListener('click', recargar);
@@ -47,13 +48,16 @@ window.addEventListener("load", actualizarPagina);
       palabrasAleatorias.splice(0)
      palabrasAleatorias.push(inputP.value);
       comenzar();
+      
     });
 
+  
+
+  
 
     
   function comenzar () {
 
-    console.log(palabrasAleatorias);
 
     document.getElementById("d").classList.add("btn-cerrar");
     document.getElementById("y").classList.add("btn-cerrar");
@@ -66,6 +70,8 @@ window.addEventListener("load", actualizarPagina);
     
       palabraOculta = palabrasAleatorias[Math.floor(Math.random()*palabrasAleatorias.length)];
       
+      
+    console.log(palabraOculta);
 
     for (let i = 0; i < palabraOculta.length;   i++) {
         
@@ -88,32 +94,37 @@ window.addEventListener("load", actualizarPagina);
     let contexto = cuadro.getContext('2d');
  
     let letra = document.getElementById("letra").value.toLowerCase();
+    
+
     letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     
     
         palabraOculta = palabraOculta.toLowerCase();
         
     let nuevaPalabra = "";
-    
-  
+
+        
 
     for (let i = 0; i < palabraOculta.length; i++) {
+      
 
         if (letra == palabraOculta[i]) {
           
           nuevaPalabra = nuevaPalabra + letra + " ";
+         
           
         } else {
           
           nuevaPalabra = nuevaPalabra + palabraUsuario [i*2] + " ";
+        
           
         }
-      
+
      }
-     
+
+
      
 
-    
 
      
     if (nuevaPalabra == palabraUsuario) {
@@ -170,9 +181,10 @@ window.addEventListener("load", actualizarPagina);
     }
 
     if (numeroVidas == 0) {
-      
-      
+      console.log(palabraOculta);
       document.getElementById("vida-uno").classList.add("one")
+      
+      document.getElementById("vida").innerText = "La palabra era: " + palabraOculta;
       vidaCero();
     }
     
@@ -191,6 +203,8 @@ window.addEventListener("load", actualizarPagina);
       document.getElementById("perder").classList.add("lose");
       document.getElementById("btn").classList.remove("ab");
       document.getElementById("boton").classList.add("ab");
+
+      
 
     /*  setTimeout ( () => document.getElementById("resultados").innerHTML = "", 5000);
       setTimeout ( () => document.getElementById("perder").innerHTML = "" , 5000);
@@ -236,6 +250,7 @@ window.addEventListener("load", actualizarPagina);
     infoBorrada.classList.remove("info-mostrar");
     infoBorrada.classList.add("info-oculta");
   }
- 
+
+  
 
 }
