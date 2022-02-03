@@ -184,7 +184,7 @@ window.addEventListener("load", actualizarPagina);
       console.log(palabraOculta);
       document.getElementById("vida-uno").classList.add("one")
       
-      document.getElementById("vida").innerText = "La palabra era: " + palabraOculta;
+      document.getElementById("vida").innerText = "La palabra era: " + palabraOculta.toLocaleUpperCase();
       vidaCero();
     }
     
