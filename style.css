@@ -1,7 +1,5 @@
 
 
-
-
 body {
     font-size: 15pt;
     margin: 0;
@@ -20,6 +18,7 @@ body {
     position: relative;
     
 }
+
 
 
 /* MENSAJE OCULTO COMIENZA */
@@ -117,10 +116,14 @@ p {
 
 img {
   
-  width: 25%;
+  width: 30%;
   height: 80%;
   
 }
+
+
+
+
 
 
 .reglas {
@@ -159,10 +162,11 @@ img {
 }
 
 .btn-cerrar {
-  transition: .5s ease all;
   opacity: 0;
-  transform: scale(0.0000009);
-  
+  transition: .5s ease all;
+  transform: translateX(19px);
+  z-index: -1;
+  display: none;
 }
 
 .hide {
@@ -182,6 +186,7 @@ img {
   height: 60%;
   width: 13%;
   font-size: 78%;  
+  transition: .5s ease all;
 }
 
 
@@ -193,13 +198,13 @@ img {
   outline: none;
   border: none;
   cursor: pointer;
-  
-  
+
   font-weight: 700;
   color: white;
 
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
-  transition: .9s ease all;
+  transition: .5s ease all;
+  
 }
 
 .modo {
@@ -210,6 +215,7 @@ border-radius: 5px;
 outline: none;
 border: 1px solid green;
 text-align: center;
+transition: .5s ease all;
 
 }
 
